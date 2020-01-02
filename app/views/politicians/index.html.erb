@@ -1,10 +1,10 @@
-<div class="container, center-align">
+<div class="container">
 <h1 class="center-align">Politicians</h1>
 
 <% @politicians.each do |crook| %>
-
-<div class="row">
-  <div class="col s4">
+<span>
+<div class="row"  style="display: inline">
+  <div class="col s6">
     <div class="card">
       <div class="card-image">
         <%= image_tag crook.image, style: 'width:100%'%> 
@@ -19,6 +19,7 @@
     </div>
   </div>
 </div>
+</span>
 
 <%end%>
 </div>
