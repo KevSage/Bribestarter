@@ -1,0 +1,18 @@
+
+
+<div class="container">
+  <p>Influencing the world, one election at a time.</h4>
+
+  <p>Log In</p>
+
+  <div class="input-field col s6">
+    <%= form_for(:session, url: login_path) do |f| %> 
+    <%= f.label :Username %>:
+    <%= f.text_field :username %> <br>
+    <%= f.label :password %>: 
+    <%= f.password_field :password %> <br>
+    <%= f.submit "Login", class: "waves-effect waves-light btn-large" %> 
+    <% end %> 
+    <%= link_to "Not a member? Register here!", new_donor_path %>
+</div>
+</div>

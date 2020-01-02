@@ -1,0 +1,9 @@
+<h4>Donate to your candidate</h4>
+
+
+<%= form_for @contribution do |f| %>
+<%= f.collection_select :politician_id, Politician.all, :id, :name,{ prompt: "Choose a Politician" }, class: "browser-default"  %>
+<%= f.label :Amount %>:
+<%= f.text_field :amount %> <br>
+<%= f.submit "Donate", class: "btn waves-effect waves-light"%>
+<% end %>

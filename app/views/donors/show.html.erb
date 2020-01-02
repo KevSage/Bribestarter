@@ -1,0 +1,29 @@
+<div class="container">
+<h4>My Profile</h4>
+<p>Name: <%= @donor.name %></h4>
+<p>Registered: <%= @donor.registered %></p>
+<p>Total Contributions:</p>
+
+<h4>My Contributions</h4>
+
+<% @donor.contributions.each do |contribution| %>
+<table>
+  <thead>
+    <tr>
+        <th> </th>
+        <th></th>
+        <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= image_tag contribution.politician.image, style: 'width:40%'%> </td>
+      <td><%= link_to contribution.politician.name, politician_path(contribution.politician) %></td>
+      <td> $<%= contribution.amount %></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
+
+</div>

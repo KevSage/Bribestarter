@@ -1,0 +1,24 @@
+<div class="container, center-align">
+<h1 class="center-align">Politicians</h1>
+
+<% @politicians.each do |crook| %>
+
+<div class="row">
+  <div class="col s4">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag crook.image, style: 'width:100%'%> 
+        <span class="card-title"><%=link_to crook.name, politician_path(crook)%></span>
+      </div>
+      <div class="card-content">
+        <p><%= crook.bio %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to "Learn More", politician_path(crook) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%end%>
+</div>
